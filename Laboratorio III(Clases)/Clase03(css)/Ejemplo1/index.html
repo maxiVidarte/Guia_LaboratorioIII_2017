@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!--<style>   h1{color:red;}  </style>etiquetas-->
+    <!-- otra forma de style es la siguiente-->
+    <link rel="stylesheet" href="css/stylos.css">
+    <!-- fuentes   con font-family vemos el tipo de fuente                       font-size vemos el tamaño de fuente                       font-style vemos si lo queremos negrita, cursiva, subrayado , etc.                       font-weight vemos el ancho                       o todo junto en una misma linea font:600 oblique 100px Ventana;
+    <style>
+        h1{
+            
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 60px;
+            font-style: oblique;
+            font-weight: 500;
+        }
+    </style>-->
+    <!--background-color hace que lo encuadre en un color
+        text align hacer que se centre-->
+    <style>
+        /*si quiero hacer varios niveles con el mismo estilo, lo hacemos de la siguiente forma
+        h1,h2{
+                /*color del texto
+                color: blue;
+                /*color del borde
+                background-color: red;
+                /*donde queremos el texto: en el centro, a la derecha, izquierda, etc
+                text-align: center;
+                /*decoracion con lineas y demas
+                text-decoration: underline;
+                /*expande palabra por palabra
+                word-spacing: 25px;
+        }*/
+        /*h1{ border-width: 10px;  border-color: brown; border-style:dotted; padding: 30px; margin-top: 50px}*/
+        /*default
+        *{  
+            
+        }*/
+/*.vistoso{
+    background-color: yellow;color: blueviolet;
+}       
+#parrafoespecial{color: green;}*/
+/*
+p + span{color: red;}
+#mispan{background-color: black;}
+  h1 + p{color: yellow;}
+  p +p{color: chocolate;}*/
+a:link{color: blue;}
+a:visited{color:red;}
+
+
+    </style>
+
+</head>
+<body>
+    <!-- color o rgb para cambiar el color del estilo  de una linea sola, si queremos hacerlo para varios tenemos que hacerlo por cada linea-->
+    <a href="#">ir a la pagina</a>
+    <h1 class="vistoso">Esto es un titulo h1</h1>
+    <p class="vistoso">Lorem ipsum dolor sit amet,<span> consectetur adipisicing elit. Aspernatur reiciendis nobis cum,</span> quos laudantium accusamus doloribus iste provident libero officia aut. Vel enim non expedita ut, sapiente architecto laboriosam dolor.</p>
+    <p id="parrafoespecial">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed excepturi voluptate nihil eaque, nemo, ipsum vel rerum autem consequatur unde illum. Sint officia ducimus iure quasi dolorem nobis voluptate, autem.</p>
+    <p>Lorem ipsum dolor sit <span id="mispan"> amet, consectetur adipisicing elit. Repudiandae fugiat dolor iure nemo inventore aliquid autem quisquam eligendi, error vel nobis corporis minima minus,</span> ex pariatur. Consequuntur magni cupiditate fugit.</p>
+    <h1><p>hola que tal</p></h1>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>selectores de jquery</title>
+    <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script>
+    $(document).on("ready",function(){
+
+        var seleccion = $(".ejem1");
+
+            if(seleccion.length)
+                console.log("Existen: "+ seleccion.length);
+            else
+                console.log("no Existe el elemento seleccionado");
+
+            //seleccion.not('.cl1').text("Este elemento no tiene la clase cl1");
+
+           // seleccion.has('p').text("este elemento tiene un paragraph en su contenido");
+
+           $('li').first().html("<strong>Soy el elemento 1</strong>");
+
+           $('li').eq(2).text("soy el elemento numero 3");
+
+
+    });
+    </script>
+</head>
+<body>
+    <div class="ejem1 cl1">
+        <p></p>
+    </div>
+    
+    <div class="ejem1">
+    <span></span>
+    </div>
+
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    </body>
+</html>

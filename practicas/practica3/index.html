@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>selectores de jquery</title>
+    <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script>
+    $(document).on("ready",function(){
+        //utilizando la etiqueta(ejemplo span)
+        $('#parrafoUno,#parrafoDos,span').text("hey somos iguales");
+    });        
+    </script>
+</head>
+<body>
+<div class='miDiv'>
+    <article>
+        <p id="parrafoUno">hola jquery</p>    
+    </article>
+</div>
+<div >
+    <article class="miDiv">
+        <p id="parrafoDos">y el curso de codigo facilito</p>    
+    </article>
+</div>
+<span></span>
+</body>
+</html>

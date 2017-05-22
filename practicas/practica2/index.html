@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>primeros pasos de jquery</title>
+    <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script>
+    //este metodo me dice cuando el metodo ya esta listo
+    $(document).on('ready',function(){
+        //uso el id prueba e imprime el texto tal cual es
+        $('#prueba').text('<p>Hola mundo!</p>'); 
+        //uso la clase prueba del cual lo imprime en codigo html
+        $('.prueba').html('<strong>estoy usando jquery</strong>');
+    });
+
+
+    </script>
+</head>
+<body>
+    
+    <div id="prueba"></div>
+    <div class="prueba"></div>
+</body>
+</html>

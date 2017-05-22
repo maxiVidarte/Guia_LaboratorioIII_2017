@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+    
+    <title>Ajax</title>
+    <script>
+        $(document).on("ready",function(){
+
+            var pet = $("#main form").attr("action");
+            var met = $("#main form").attr("method");
+           
+            $("#main form").on("submit",function(e){
+                e.preventDefault();
+            
+            $.ajax({
+                //se ejecuta antes de enviar la peticion
+                beforeSend:function(){
+                   
+                },
+                url: pet,
+                type:met,
+                data: $("#main form").serialize(),
+                //cuando se cumple
+                success: function(resp){
+                    if(resp == "correcto")
+                        $("#status").html('<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb2y55pK3Fc5OU7qt50zS5NgOu4f1qU-9iqjy9aGNbwSSNJ2KNtmRs4w"/>')
+                    else
+                        $("#status").html('<img src="http://www.freeiconspng.com/uploads/x-png-18.png"/>')
+                    console.log(resp)
+                },
+                //cuando hay un error
+                error : function(jqXHR,estado,error){
+                    $("#status").html('<img src="http://www.freeiconspng.com/uploads/x-png-18.png"/>')
+                    console.log(estado)
+                    console.log(error)
+                },
+                //de todas formas se cumple
+                complete: function(jqXHR,estado){
+                    console.log(estado);
+                },
+                timeout:10000
+            })
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="main">
+        <h1>Formulario de contacto</h1>
+        <form action="peticion.php" name="fo" method="POST">
+            <input type="text" name="nombre" placeholder="Nombre...." />
+            <input type="email" name="mail" placeholder="Correo electronico..." />
+            <textarea name="mensaje" placeholder="Mensaje..." ></textarea>
+            <div style="display:block;width:60%;margin:0 auto">
+                    <input type="submit" name="send" value="Enviar"/>
+                    <div id="status"><!--<img src="../img/x.png"/>--></div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

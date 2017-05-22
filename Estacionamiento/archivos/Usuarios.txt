@@ -1,0 +1,4 @@
+admin - 1234
+empleado1 - 1234
+empleado2 - 1234
+empleado3 - 1234
