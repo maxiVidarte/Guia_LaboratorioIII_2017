@@ -3,11 +3,11 @@
 class estacionamiento
 {
 
-    public static function Guardar($patente)
+    public static function Guardar($patente,$color,$marca)
     {
         $archivo = fopen("archivos/estacionados.txt","a");
         $ahora = date("Y-m-d H:i:s");
-        $renglon =$patente."=>".$ahora."\n";
+        $renglon =$patente."=>".$color."=>".$marca."=>".$ahora."\n";
         fwrite($archivo, $renglon);
         fclose($archivo);
     }
@@ -84,12 +84,12 @@ class estacionamiento
         $lista = estacionamiento::Leer();
         $archivo = fopen("archivos/tablaestacionados.php","w");
 
-        $tablaCompleta = "<table border=1><th>patente </th><th>Ingreso</th>";
+        $tablaCompleta = "<table border=1><th>patente </th><th>Color</th><th>Marca</th><th>Ingreso</th>";
         $renglon = "";
 
         foreach($lista as $auto)
         {
-            $renglon = $renglon."<tr> <td>".$auto[0]."</td><td>".$auto[1]."</td></tr>";
+            $renglon = $renglon."<tr> <td>".$auto[0]."</td><td>".$auto[1]."</td><td>".$auto[2]."</td><td>".$auto[3]."</td></tr>";
 
         }
         $tablaCompleta = $tablaCompleta.$renglon."</table>";

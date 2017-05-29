@@ -1,0 +1,61 @@
+.CajaEnunciadoDerecha {
+  float :right;
+  max-width: 50%;
+  border: 10px 10px 10px 10px;
+top: 0px;
+width: 400px;
+margin: 10px 10px 10px 10px;
+padding: 10px 10px 10px 10px;
+/* margin-top: 8px; */
+margin-bottom: 2%;
+transition: opacity 1s;
+-webkit-transition: opacity 1s;
+border-radius: 15px;
+-webkit-border-radius: 15px;
+margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+}
+td{
+  border: 1;
+  height: 50px;
+
+}
+table {
+  width:100%;
+  border-collapse: collapse;
+}
+.CajaEnunciado {
+  float: left;
+  max-width: 30%;
+  border: 10;
+top: 10px 10px 10px 10px;
+width: 400px;
+margin: 10px 10px 10px 10px;
+padding: 10px 10px 10px 10px;
+/* margin-top: 8px; */
+margin-bottom: 2%;
+transition: opacity 1s;
+-webkit-transition: opacity 1s;
+border-radius: 15px;
+-webkit-border-radius: 15px;
+}
+.CajaEnunciadoCentral{
+  float: center;
+  max-width: 30%;
+  border: 10;
+top: 0px;
+width: 400px;
+margin: 10;
+padding: 10px;
+/* margin-top: 8px; */
+margin-bottom: 2%;
+transition: opacity 1s;
+-webkit-transition: opacity 1s;
+border-radius: 15px;
+-webkit-border-radius: 15px;
+}
+.imagen{
+  background-image: url("archivos/parqueOcupado.png");
+}

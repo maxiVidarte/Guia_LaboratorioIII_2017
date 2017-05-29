@@ -12,6 +12,7 @@ estacionamiento::CrearTablaEstacionados();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <title>Document</title>
 </head>
 <body>
@@ -19,13 +20,19 @@ estacionamiento::CrearTablaEstacionados();
         <input type="submit" name="deslogueo" value="Log out">
     </form>
     <form action="autoGestion.php" method="post">
-        <input type="text" name="patente" title="formato de patente: AAA 000" require pattent="[a-z]{3}[0-9]{3}">
+        <input type="text" name="patente" value="patente" title="formato de patente: AAA 000" require pattent="[a-z]{3}[0-9]{3}">
         <br>
+        <input type="text" name="color" value="color"><br>
+        <input type="text" name="marca" value="marca">
         <input type="submit" name="estacionar" value="Ingreso">
         <input type="submit" name="estacionar" value="egreso">
-
+        
     </form>
-      <div style="float:left;">
+      <br>
+      <div class="imagen">
+          
+      </div>
+      <div class="CajaEnunciado">
       <h2>autos: </h2>
      
 
@@ -35,7 +42,7 @@ estacionamiento::CrearTablaEstacionados();
 
      ?>
      </div>
-     <div style "float:left; position:absolute; left:300px;">
+     <div class="CajaEnunciadoDerecha">
     <h2>Facturado:</h2>
      <?php 
 

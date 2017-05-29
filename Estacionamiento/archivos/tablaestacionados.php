@@ -1,1 +1,1 @@
-<table border=1><th>patente </th><th>Ingreso</th></table>
+<table border=1><th>patente </th><th>Color</th><th>Marca</th><th>Ingreso</th></table>
